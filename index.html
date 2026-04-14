@@ -335,16 +335,6 @@
       padding:14px;
       font-weight:700;
     }
-    .danger-box{
-      display:none;
-      margin-top:16px;
-      background:#fff2f2;
-      color:var(--danger);
-      border:1px solid #f3c7c7;
-      border-radius:14px;
-      padding:14px;
-      font-weight:700;
-    }
 
     .admin-header{
       display:flex;
@@ -487,10 +477,10 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">7-hour Driver CPC courses in London</div>
-          <h1>Book your Driver CPC course and stay compliant.</h1>
+          <h1>Book your Driver CPC course quickly and easily.</h1>
           <p>
-            Fast booking for HGV and professional drivers. Clear dates, simple registration,
-            and fleet enquiries for transport companies.
+            Secure your place today with clear dates, simple registration,
+            and flexible options for individual drivers and fleet operators.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#booking">Book a Course</a>
@@ -498,7 +488,7 @@
           </div>
           <div class="trust-row">
             <div class="trust-chip">London-based training</div>
-            <div class="trust-chip">Simple online booking</div>
+            <div class="trust-chip">Simple booking</div>
             <div class="trust-chip">Fleet enquiries welcome</div>
           </div>
         </div>
@@ -597,17 +587,17 @@
       <div class="container">
         <h2 class="section-title">Book your course</h2>
         <p class="section-lead">
-          This version saves bookings in your browser so you can test it on GitHub Pages without a backend.
+          Secure your place today. Limited spaces available on each course date.
         </p>
 
         <div class="booking-layout">
           <div class="card">
-            <h3>Before launch</h3>
+            <h3>Before you book</h3>
             <ul>
-              <li>Replace the sample dates, phone number, and email address.</li>
-              <li>Only use approval wording that is true for your business or partner.</li>
-              <li>Later, connect this to Formspree, Supabase, Firebase, or Google Sheets.</li>
-              <li>For now, every booking is stored locally in this browser.</li>
+              <li>Choose your preferred date from the list.</li>
+              <li>Enter your details carefully so we can confirm your place.</li>
+              <li>Fleet managers can use the company enquiry form below.</li>
+              <li>We’ll contact you to confirm the next steps.</li>
             </ul>
           </div>
 
@@ -669,8 +659,7 @@
 
               <button class="btn btn-primary" type="submit">Save Booking</button>
               <div id="bookingSuccess" class="success-box">Booking saved successfully.</div>
-              <div id="bookingError" class="danger-box">Could not save booking.</div>
-              <p class="small">These saved bookings appear in the Bookings section below on this device only.</p>
+              <p class="small">We recommend checking the Bookings section below after submitting.</p>
             </form>
           </div>
         </div>
@@ -736,7 +725,7 @@
         <div class="admin-header">
           <div>
             <h2 class="section-title" style="margin-bottom:6px;">Bookings</h2>
-            <p class="section-lead" style="margin-bottom:0;">Saved on this browser only.</p>
+            <p class="section-lead" style="margin-bottom:0;">Review saved enquiries below.</p>
           </div>
           <div class="admin-controls">
             <button class="btn btn-secondary" onclick="exportBookings()">Export Bookings CSV</button>
@@ -814,8 +803,8 @@
       <div class="container">
         <div class="cta-card">
           <div>
-            <h2 style="margin:0;">Ready to start taking enquiries?</h2>
-            <p>Publish this on GitHub Pages, replace the sample details, and share your link today.</p>
+            <h2 style="margin:0;">Ready to secure your place?</h2>
+            <p>Choose your course date and submit your booking today.</p>
           </div>
           <a class="btn btn-primary" href="#booking">Book Now</a>
         </div>
@@ -826,7 +815,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© 2026 City CPC Training</div>
-      <div>Starter website for CPC bookings</div>
+      <div>Driver CPC courses in London</div>
     </div>
   </footer>
 
@@ -973,19 +962,13 @@
         notes: document.getElementById("notes").value.trim()
       };
 
-      try {
-        const bookings = readStorage(BOOKINGS_KEY);
-        bookings.push(booking);
-        writeStorage(BOOKINGS_KEY, bookings);
+      const bookings = readStorage(BOOKINGS_KEY);
+      bookings.push(booking);
+      writeStorage(BOOKINGS_KEY, bookings);
 
-        document.getElementById("bookingSuccess").style.display = "block";
-        document.getElementById("bookingError").style.display = "none";
-        this.reset();
-        refreshTables();
-      } catch (err) {
-        document.getElementById("bookingError").style.display = "block";
-        document.getElementById("bookingSuccess").style.display = "none";
-      }
+      document.getElementById("bookingSuccess").style.display = "block";
+      this.reset();
+      refreshTables();
     });
 
     document.getElementById("companyForm").addEventListener("submit", function (e) {
