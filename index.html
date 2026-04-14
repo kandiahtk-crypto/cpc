@@ -267,6 +267,15 @@
       font-weight:700;
       margin-bottom:16px;
     }
+    .course-content{
+      color:var(--muted);
+      font-size:14px;
+      margin:0 0 16px;
+      padding-left:18px;
+    }
+    .course-content li{
+      margin-bottom:6px;
+    }
 
     .feature h3,
     .contact-item h3{
@@ -487,7 +496,7 @@
             <a class="btn btn-secondary" href="#courses">View Dates</a>
           </div>
           <div class="trust-row">
-            <div class="trust-chip">London-based training</div>
+            <div class="trust-chip">Safe Driving & Compliance</div>
             <div class="trust-chip">Simple booking</div>
             <div class="trust-chip">Fleet enquiries welcome</div>
           </div>
@@ -496,9 +505,9 @@
         <div class="card hero-card">
           <h3>Upcoming course snapshot</h3>
           <ul>
-            <li>25 April 2026 — London — £60 — 8 spaces left</li>
-            <li>28 April 2026 — London — £60 — 12 spaces left</li>
-            <li>2 May 2026 — London — £65 — 10 spaces left</li>
+            <li>25 April 2026 — Safe Driving & Compliance — £60 — 8 spaces left</li>
+            <li>28 April 2026 — Road Safety & Regulations — £60 — 12 spaces left</li>
+            <li>2 May 2026 — Driver Hours & Tachograph Rules — £65 — 10 spaces left</li>
           </ul>
 
           <div class="stat-grid">
@@ -512,7 +521,7 @@
             </div>
             <div class="stat">
               <strong>35h</strong>
-              5-year requirement
+              CPC requirement
             </div>
           </div>
         </div>
@@ -523,33 +532,54 @@
       <div class="container">
         <h2 class="section-title">Upcoming courses</h2>
         <p class="section-lead">
-          Replace these sample dates with your real schedule.
+          Practical Driver CPC training with clear topics, clear dates, and simple booking.
         </p>
 
         <div class="courses-grid">
           <article class="card">
             <div class="tag">Popular</div>
             <div class="date">25 April 2026</div>
-            <h3>Driver CPC Course</h3>
+            <h3>Driver CPC – Safe Driving & Compliance</h3>
             <div class="course-meta">London • 9:00 AM to 5:00 PM • 8 spaces left</div>
+            <ul class="course-content">
+              <li>Driver hours and basic tachograph awareness</li>
+              <li>Road safety and hazard awareness</li>
+              <li>Vehicle checks and defect reporting</li>
+              <li>Legal responsibilities and compliance</li>
+              <li>Reducing accidents and risks</li>
+            </ul>
             <div class="price">£60</div>
-            <a class="btn btn-primary" href="#booking" onclick="prefillCourse('25 April 2026 - London - £60')">Book This Date</a>
+            <a class="btn btn-primary" href="#booking" onclick="prefillCourse('25 April 2026 - Safe Driving & Compliance - £60')">Book This Date</a>
           </article>
 
           <article class="card">
             <div class="date">28 April 2026</div>
-            <h3>Driver CPC Course</h3>
+            <h3>Driver CPC – Road Safety & Regulations</h3>
             <div class="course-meta">London • 9:00 AM to 5:00 PM • 12 spaces left</div>
+            <ul class="course-content">
+              <li>Urban driving hazards and road safety</li>
+              <li>Professional driving standards</li>
+              <li>Compliance and driver responsibilities</li>
+              <li>Vehicle safety checks</li>
+              <li>Risk reduction on the road</li>
+            </ul>
             <div class="price">£60</div>
-            <a class="btn btn-primary" href="#booking" onclick="prefillCourse('28 April 2026 - London - £60')">Book This Date</a>
+            <a class="btn btn-primary" href="#booking" onclick="prefillCourse('28 April 2026 - Road Safety & Regulations - £60')">Book This Date</a>
           </article>
 
           <article class="card">
             <div class="date">2 May 2026</div>
-            <h3>Driver CPC Course</h3>
+            <h3>Driver CPC – Driver Hours & Tachograph Rules</h3>
             <div class="course-meta">London • 9:00 AM to 5:00 PM • 10 spaces left</div>
+            <ul class="course-content">
+              <li>Driver hours and rest periods</li>
+              <li>Tachograph rules and common mistakes</li>
+              <li>Working time basics</li>
+              <li>Record keeping and compliance</li>
+              <li>Avoiding penalties and infringements</li>
+            </ul>
             <div class="price">£65</div>
-            <a class="btn btn-primary" href="#booking" onclick="prefillCourse('2 May 2026 - London - £65')">Book This Date</a>
+            <a class="btn btn-primary" href="#booking" onclick="prefillCourse('2 May 2026 - Driver Hours & Tachograph Rules - £65')">Book This Date</a>
           </article>
         </div>
       </div>
@@ -559,7 +589,7 @@
       <div class="container">
         <h2 class="section-title">Why drivers book with you</h2>
         <p class="section-lead">
-          Keep this practical: drivers care about compliance, convenience, price, and clear dates.
+          Drivers want clear dates, practical content, and a quick way to secure a place.
         </p>
 
         <div class="feature-grid">
@@ -568,8 +598,8 @@
             <p>Drivers can reserve a seat in minutes with a simple form.</p>
           </div>
           <div class="card feature">
-            <h3>Clear course dates</h3>
-            <p>Show exact dates, times, location, and remaining spaces.</p>
+            <h3>Useful course topics</h3>
+            <p>Course titles and content are clear, practical, and easy to understand.</p>
           </div>
           <div class="card feature">
             <h3>Fleet-friendly</h3>
@@ -594,7 +624,7 @@
           <div class="card">
             <h3>Before you book</h3>
             <ul>
-              <li>Choose your preferred date from the list.</li>
+              <li>Choose your preferred course title and date.</li>
               <li>Enter your details carefully so we can confirm your place.</li>
               <li>Fleet managers can use the company enquiry form below.</li>
               <li>We’ll contact you to confirm the next steps.</li>
@@ -620,12 +650,12 @@
                 </div>
 
                 <div class="field">
-                  <label for="courseDate">Course date</label>
+                  <label for="courseDate">Course date and title</label>
                   <select id="courseDate" required>
-                    <option value="">Select a date</option>
-                    <option>25 April 2026 - London - £60</option>
-                    <option>28 April 2026 - London - £60</option>
-                    <option>2 May 2026 - London - £65</option>
+                    <option value="">Select a course</option>
+                    <option>25 April 2026 - Safe Driving & Compliance - £60</option>
+                    <option>28 April 2026 - Road Safety & Regulations - £60</option>
+                    <option>2 May 2026 - Driver Hours & Tachograph Rules - £65</option>
                   </select>
                 </div>
 
